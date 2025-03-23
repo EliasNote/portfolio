@@ -96,6 +96,12 @@ nav {
 	position: relative;
 }
 
+#aviao {
+	margin-top: 150px;
+	position: absolute;
+	animation: fly 30s linear forwards;
+}
+
 #paisagem {
 	height: 1130px;
 	text-align: center;
@@ -127,6 +133,15 @@ nav {
 	}
 	100% {
 		transform: translateX(-100vw);
+	}
+}
+
+@keyframes fly {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(calc(100vw - 200px));
 	}
 }
 
@@ -295,6 +310,7 @@ nav {
 	max-width: 42px;
 	max-height: 42px;
 }
+
 .skill p {
 	margin-block: 0;
 }
