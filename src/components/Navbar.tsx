@@ -23,7 +23,7 @@ const Navbar = () => {
 			<img id="logo" src="" width={"130px"} height={"42px"} alt="logo" />
 			<div id="botoes-container">
 				<button className="botao-central">Habilidades</button>
-				<button className="botao-central">Experiências</button>
+				<button className="botao-central">Qualificações</button>
 				<button className="botao-central">Projetos</button>
 				<button className="botao-central">Contato</button>
 			</div>
