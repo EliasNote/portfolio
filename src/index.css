@@ -91,15 +91,22 @@ nav {
 }
 
 #inicio {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+#inicio div {
 	width: 1320px;
 	margin: 40vh auto;
 	position: relative;
 }
 
 #aviao {
-	margin-top: 150px;
 	position: absolute;
-	animation: fly 30s linear forwards;
+	animation: fly 40s linear infinite;
+	top: 500px;
 }
 
 #paisagem {
@@ -118,7 +125,16 @@ nav {
 	overflow: hidden;
 }
 
-@keyframes moveCloudLTR {
+@keyframes fly {
+	0% {
+		transform: translateX(-200px);
+	}
+	100% {
+		transform: translateX(100vw);
+	}
+}
+
+@keyframes moveRight {
 	0% {
 		transform: translateX(-30vw);
 	}
@@ -127,21 +143,12 @@ nav {
 	}
 }
 
-@keyframes moveCloudRTL {
+@keyframes moveLeft {
 	0% {
 		transform: translateX(30vw);
 	}
 	100% {
 		transform: translateX(-100vw);
-	}
-}
-
-@keyframes fly {
-	0% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(calc(100vw - 200px));
 	}
 }
 
@@ -210,7 +217,7 @@ nav {
 	left: 0;
 	z-index: 10;
 	will-change: transform;
-	animation: moveCloudLTR 35s linear infinite;
+	animation: moveRight 35s linear infinite;
 }
 
 .nuvem2 {
@@ -219,7 +226,7 @@ nav {
 	right: 0;
 	z-index: 10;
 	will-change: transform;
-	animation: moveCloudRTL 50s linear infinite;
+	animation: moveLeft 50s linear infinite;
 }
 
 .nuvem3 {
@@ -228,7 +235,7 @@ nav {
 	left: 0;
 	z-index: 10;
 	will-change: transform;
-	animation: moveCloudLTR 20s linear infinite;
+	animation: moveRight 20s linear infinite;
 }
 
 .nuvem4 {
@@ -237,7 +244,7 @@ nav {
 	right: 0;
 	z-index: 10;
 	will-change: transform;
-	animation: moveCloudRTL 30s linear infinite;
+	animation: moveLeft 30s linear infinite;
 }
 
 #noite {

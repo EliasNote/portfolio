@@ -1,3 +1,5 @@
+import Aviao from "../assets/aviao.png";
+
 const Inicio = () => {
 	return (
 		<div id="inicio">
@@ -6,7 +8,7 @@ const Inicio = () => {
 				<br />
 				<b style={{ fontSize: "56px" }}>Desenvolvedor</b>
 			</div>
-			<div></div>
+			<img src={Aviao} id="aviao" width={"200px"} />
 		</div>
 	);
 };
